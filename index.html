@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Saga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header section  -->
+   <div class="header-section">
+    <div class="left-section">
+        <div class="left-section">
+            <div class="header-title">
+                <i class="fas fa-film"></i>
+                Cinema Saga
+            </div>
+        </div>
+    </div>
+
+    <div class="left-section">
+        <nav class="nav-menu">
+            <span class="menu-item">
+                <a href="#home">Home</a>
+            </span>
+
+            <span class="menu-item">
+                <a href="#movies">Movies</a>
+            </span>
+
+            <span class="menu-item">
+                <a href="#showtime">Showtime</a>
+            </span>
+
+
+            <span class="menu-item">
+                <a href="#contact">Contact</a>
+            </span>
+        </nav>
+
+      <img src="menu.svg" alt="menu-icon" class="menu-icon">
+    </div>
+    </div>
+   </div>
+
+   <!-- home section -->
+    <div class="home-section" id="home">
+     <div class="hero-container">
+        <div class="hero-text">
+            <h1 class="hero-header-text">The Magic Of The Big Screen Awaits</h1>
+            <h3 class="hero-header-subtext">Book tickets for the weeks biggest blockbusters and premium immersive live experiences...</h3>
+        </div>
+        <button class="cta-btn">BOOK NOW </button>
+     </div>
+    </div>
+
+    <!-- search section -->
+     <div class="search-section">
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="search" name="search-input" class="search-input" id="movieSearch">
+                <button class="search-btn" id="movieSearchBtn">SEARCH</button>
+            </div>
+        </div>
+     </div>
+
+<!-- movie section -->
+ <div class="movie-section">
+    <div class="now-showing-container">
+        <div class="now-showing-header">
+            <h1>Now Showing</h1>
+        </div>
+        <div class="movie-card-grid" id="nowshowinggrid">
+        <!-- the movie card shows here -->
+        </div>
+    </div>
+    <div class="coming-soon-container">
+        <div class="coming-soon-header">
+            <h1>Coming soon</h1>
+        </div>
+        <div class="movie-card-grid" id="comingsoongrid">
+        </div>
+    </div>
+ </div>
+
+
+ <!-- show time section -->
+  <div class="show-time-section" id="showtime">
+    <div class="showtime-container">
+        <div class="showtime-header">
+            <h1>showtime</h1>
+        </div>
+       
+         <div class="showtime-content">
+            <div class="showtime-list">
+                
+                <div class="showtime-card">
+                    <h2 class="showtime-day">Monday - Thursday</h2>
+                    <p class="showtime-hours"> 10:00am - 12:00pm</p>
+                    <span class="showtime-status"> open</span>
+                </div>
+            
+                    <div class="showtime-card">
+                        <h2 class="showtime-day">Friday - saturday</h2>
+                        <p class="showtime-hours"> 10:00am - 2:00pm</p>
+                        <span class="showtime-status"> open</span>
+                    </div>
+                    <div class="showtime-card">
+                        <h2 class="showtime-day">Sunday</h2>
+                        <p class="showtime-hours"> 11:00am - 10:00pm</p>
+                        <span class="showtime-status"> open</span>
+                    </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+
+  <!-- modal section -->
+   <!-- movie modal  -->
+    <div class="modal" id="movieModal">
+        <div class="modaal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-poster">
+                    <img src="" alt="Movie Poster">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="movie-details">
+                        <p><strong>Genre:</strong> <span id="modalGenre"></span></p>
+                        <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+                        <p><strong>Rating:</strong> <span id="modalRating"></span></p>
+                    </div>
+                    <p id="modalDescription"></p>
+                    <div class="showTimes">
+                        <h3>showtimes</h3>
+                        <div id="showtimeButtons">
+                            <!-- to be added with javascript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- booking modal -->
+     <div class="modal" id="bookingModal">
+        <div class="modal-content booking-modal-content">
+            <span class="close booking-close">&times;</span>
+            <div class="bookimg-header">
+                <h2 id="bookingMovieTitle"></h2>
+                <p id="bookingShowtime"></p>
+            </div>
+            <div class="seating-container">
+                <div class="screen">
+                    <div class="screen-label">SCREEN</div>
+                </div>
+                <div class="seating-chart" id="seatingchart">
+                    <!-- to be added by javascript -->
+                </div>
+                <div class="seat-legend">
+                    <div class="legend-item">
+                        <div class="seat available"></div>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat selected"></div>
+                        <span>Selected</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="seat occupied"></div>
+                        <span>Occupied</span>
+                    </div>
+                </div>
+            </div>
+          <div class="booking-summary">
+            <div class="selected-seats">
+            <span> 
+                Selected Seats: 
+                <span id="selectedSeatsDisplay">None</span>
+        </span>
+            </div>
+            <div class="total-price">
+            <span> 
+                Total Price: $
+                <span id="selectedSeatsDisplay">0</span>
+        </span>
+          </div>
+          <button class="book-ticket-btn" id="bookTicketBtn">Book Tickets</button>
+
+
+
+
+          </div>
+        </div>
+     </div>
+
+
+  <footer class="footer">
+<div class="container">
+    <div class="footer_content">
+        <div class="footer-section">
+            <h3>CINEMASAGA</h3>
+            <p>Bringing the magic of movies clodser to you, one frame at a time</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#movie">Movie</a></li>
+                <li><a href="#showtime">Showtime</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Info</h4>
+            <i class="fas fa-phone"></i>
+            <p>(234)7812345678</p>
+            <p><i class="fas fa-mail"></i>imfo@cinemasaga.com.ng</p>
+            <p><i class="fas fa-map-marker-alt"></i>179 lagos street, A-Tech city</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <span>2026</span> cinemasaga.All Right Reserved.</p>
+    </div>
+</div>
+  </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
