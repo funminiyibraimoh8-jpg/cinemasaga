@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="left-section">
+    <div class="right-section">
         <nav class="nav-menu">
             <span class="menu-item">
                 <a href="#home">Home</a>
@@ -40,8 +40,8 @@
                 <a href="#contact">Contact</a>
             </span>
         </nav>
-
-      <img src="menu.svg" alt="menu-icon" class="menu-icon">
+        <i class="fas fa-bars menu-icon"></i>
+      <!-- <img src="menu.svg" alt="menu-icon" class="menu-icon"> -->
     </div>
     </div>
    </div>
@@ -58,7 +58,7 @@
     </div>
 
     <!-- search section -->
-     <div class="search-section">
+     <div class="search-section" id="showtime">
         <div class="search-container">
             <div class="search-bar">
                 <input type="search" name="search-input" class="search-input" id="movieSearch">
@@ -68,7 +68,7 @@
      </div>
 
 <!-- movie section -->
- <div class="movie-section">
+ <div class="movie-section" id="movie">
     <div class="now-showing-container">
         <div class="now-showing-header">
             <h1>Now Showing</h1>
@@ -126,7 +126,7 @@
             <span class="close">&times;</span>
             <div class="modal-body">
                 <div class="modal-poster">
-                    <img src="" alt="Movie Poster">
+                    <img src="" alt="Movie-Poster" id="modalPoster">
                 </div>
                 <div class="modal-info">
                     <h2 id="modalTitle"></h2>
